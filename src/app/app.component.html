@@ -1,4 +1,12 @@
-<hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  Enter the weight...!
 </p>
+<form [formGroup]="WeightForm" (ngSubmit)="collectData()">
+  <input
+    type="text"
+    name="Weight"
+    formControlName="Weight"
+    placeholder="weight in kg"
+  /><br /><br />
+  <button type="submit">Convert</button>
+</form>
