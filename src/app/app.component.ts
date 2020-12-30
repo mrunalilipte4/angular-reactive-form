@@ -11,6 +11,7 @@ export class AppComponent {
     Weight: new FormControl('')
   });
   collectData(){
-    console.warn(this.WeightForm.value);
+    //console.warn(this.WeightForm.value);
+    console.log(this.WeightForm)
   }
 }
