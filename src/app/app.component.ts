@@ -8,10 +8,13 @@ import { FormControl, FormGroup } from "@angular/forms";
 })
 export class AppComponent {
   WeightForm = new FormGroup({
-    Weight: new FormControl('')
+    Weight: new FormControl(""),
+    unit: new FormControl("")
   });
-  collectData(){
+  collectData() {
     //console.warn(this.WeightForm.value);
-    console.log(this.WeightForm)
+    console.log(this.WeightForm.get("Weight").value);
+    console.log(this.WeightForm.get("unit").value);
+    console.log(this.WeightForm.get("Weight").value * 10 + "gm");
   }
 }
